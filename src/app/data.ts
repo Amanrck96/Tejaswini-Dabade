@@ -162,14 +162,13 @@ export const resumeData = {
     },
   ],
   coreCompetencies: [
-    "Recruitment",
-    "Candidate Sourcing & Screening",
-    "Job Portals (Naukri, Shine, Apna)",
-    "Hiring Manager Coordination",
-    "Candidate Follow-ups",
-    "Employee Relations",
-    "Advanced Excel",
-    "Data Management",
+    "HR Knowledge",
+    "Business Acumen",
+    "Problem-Solving",
+    "Data Analysis",
+    "Technical Proficiency",
+    "HRIS Systems",
+    "Data Visualization",
   ],
   education: [
     {
@@ -189,7 +188,14 @@ export const resumeData = {
     "Participated and won many racing tournaments in college (2018-19).",
     "Won 3rd position in 800 meters race in Youth Sports organized by Reliance Foundation (2017).",
   ],
-  skills: ["Decision-making", "Time management", "Multitasking"],
+  skills: [
+    "Clear Communication",
+    "Collaboration",
+    "Presentation Skills",
+    "Decision-making",
+    "Time management",
+    "Multitasking",
+  ],
   interests: ["Sports", "Dance", "Music", "Cooking"],
   languages: ["English", "Hindi", "Marathi"],
 };
