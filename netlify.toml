@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NEXT_PUBLIC_FIREBASE_PROJECT_ID = "studio-5520018713-2997f"
+  NEXT_PUBLIC_FIREBASE_PROJECT_NUMBER = "346351085167"
+
+[context.production.environment]
+  GEMINI_API_KEY = "AIzaSyA7Y7jgRg_BaWSPm_wvTdoBbBu7XCO36xg"
+  GOOGLE_API_KEY = "AIzaSyA7Y7jgRg_BaWSPm_wvTdoBbBu7XCO36xg"

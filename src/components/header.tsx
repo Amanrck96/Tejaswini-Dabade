@@ -7,6 +7,7 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetTitle, // Added import for SheetTitle
 } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
@@ -75,6 +76,7 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
+              <SheetTitle className="sr-only">Menu</SheetTitle> // Added SheetTitle for accessibility
               <nav className="grid gap-6 text-lg font-medium mt-8">
                 <Link
                   href="#home"
