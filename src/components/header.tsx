@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Download } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
+import { fullResumeText } from "@/app/data";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -21,13 +22,22 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [downloadUrl, setDownloadUrl] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    const blob = new Blob([fullResumeText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    setDownloadUrl(url);
+
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+        URL.revokeObjectURL(url);
+    };
   }, []);
 
   return (
@@ -54,6 +64,12 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Button asChild variant="outline" size="sm">
+            <a href={downloadUrl} download="Tejaswini_Dabade_Resume.txt">
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
+            </a>
+          </Button>
         </nav>
         <div className="md:hidden">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -83,6 +99,12 @@ export default function Header() {
                     {link.label}
                     </Link>
                 ))}
+                 <Button asChild>
+                    <a href={downloadUrl} download="Tejaswini_Dabade_Resume.txt">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Resume
+                    </a>
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>
