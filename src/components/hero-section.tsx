@@ -11,7 +11,7 @@ export default function HeroSection({ summary }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="relative w-full h-dvh flex items-center justify-center text-center overflow-hidden"
+      className="relative w-full h-dvh flex items-center justify-center text-center md:text-left overflow-hidden"
     >
       <div className="absolute inset-0 -z-10">
         <div className="absolute -bottom-1/3 -right-1/4 w-1/2 h-1/2 bg-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -19,48 +19,51 @@ export default function HeroSection({ summary }: HeroSectionProps) {
       </div>
 
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center space-y-4">
-          <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg mb-4">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="flex flex-col items-center md:items-start">
+            <p className="text-lg md:text-xl text-foreground/80 font-headline">
+              {resumeData.title}
+            </p>
+            <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary">
+              {resumeData.name}
+            </h1>
+            <p className="max-w-[700px] text-muted-foreground md:text-lg mt-4">
+              {summary}
+            </p>
+            <div className="flex items-center gap-4 pt-4 mt-4">
+              <Button asChild variant="outline">
+                <a href={`mailto:${resumeData.contact.email}`}>
+                  <Mail className="mr-2 h-4 w-4" /> Email Me
+                </a>
+              </Button>
+              <div className="flex items-center gap-1">
+                <Button asChild variant="ghost" size="icon">
+                  <a
+                    href={`https://${resumeData.contact.linkedin}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </Button>
+                <Button asChild variant="ghost" size="icon">
+                  <a href={`tel:${resumeData.contact.phone}`} aria-label="Phone">
+                    <Phone className="h-5 w-5" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg justify-self-center md:justify-self-end">
             <Image
               src="https://media.licdn.com/dms/image/v2/D4D35AQGjincfAP3vaA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1733424242818?e=1761303600&v=beta&t=JS24vtLWbgNCEVRsQVP-nIBHAaQXVbd3R4Ixtl0UrzE"
               alt={resumeData.name}
-              fill
-              style={{ objectFit: "cover" }}
+              width={200}
+              height={200}
+              className="object-cover w-full h-full"
               priority
             />
-          </div>
-          <p className="text-lg md:text-xl text-foreground/80 font-headline">
-            {resumeData.title}
-          </p>
-          <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary">
-            {resumeData.name}
-          </h1>
-          <p className="max-w-[700px] text-muted-foreground md:text-lg">
-            {summary}
-          </p>
-          <div className="flex items-center gap-4 pt-4">
-            <Button asChild variant="outline">
-              <a href={`mailto:${resumeData.contact.email}`}>
-                <Mail className="mr-2 h-4 w-4" /> Email Me
-              </a>
-            </Button>
-            <div className="flex items-center gap-1">
-              <Button asChild variant="ghost" size="icon">
-                <a
-                  href={`https://${resumeData.contact.linkedin}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button asChild variant="ghost" size="icon">
-                <a href={`tel:${resumeData.contact.phone}`} aria-label="Phone">
-                  <Phone className="h-5 w-5" />
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </div>
