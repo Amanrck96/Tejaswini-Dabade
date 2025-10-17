@@ -20,7 +20,7 @@ export default function HeroSection({ summary }: HeroSectionProps) {
 
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start order-2 md:order-1">
             <p className="text-lg md:text-xl text-foreground/80 font-headline">
               {resumeData.title}
             </p>
@@ -55,13 +55,12 @@ export default function HeroSection({ summary }: HeroSectionProps) {
               </div>
             </div>
           </div>
-          <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg justify-self-center md:justify-self-end">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg justify-self-center order-1 md:order-2">
             <Image
               src="https://media.licdn.com/dms/image/v2/D4D35AQGjincfAP3vaA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1733424242818?e=1761303600&v=beta&t=JS24vtLWbgNCEVRsQVP-nIBHAaQXVbd3R4Ixtl0UrzE"
               alt={resumeData.name}
-              width={200}
-              height={200}
-              className="object-cover w-full h-full"
+              fill
+              className="object-cover"
               priority
             />
           </div>
