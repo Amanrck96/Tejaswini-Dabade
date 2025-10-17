@@ -20,7 +20,7 @@ export default function HeroSection({ summary }: HeroSectionProps) {
 
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg justify-self-center">
+          <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg justify-self-center">
             <Image
               src="https://media.licdn.com/dms/image/v2/D4D35AQGjincfAP3vaA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1733424242818?e=1761303600&v=beta&t=JS24vtLWbgNCEVRsQVP-nIBHAaQXVbd3R4Ixtl0UrzE"
               alt={resumeData.name}
