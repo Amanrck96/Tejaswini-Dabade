@@ -1,6 +1,7 @@
 import { resumeData } from "@/app/data";
 import { Button } from "./ui/button";
 import { Linkedin, Mail, Phone } from "lucide-react";
+import Image from "next/image";
 
 type HeroSectionProps = {
   summary: string;
@@ -19,6 +20,15 @@ export default function HeroSection({ summary }: HeroSectionProps) {
 
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center space-y-4">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg mb-4">
+            <Image
+              src="https://media.licdn.com/dms/image/v2/D4D35AQGjincfAP3vaA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1733424242818?e=1761303600&v=beta&t=JS24vtLWbgNCEVRsQVP-nIBHAaQXVbd3R4Ixtl0UrzE"
+              alt={resumeData.name}
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </div>
           <p className="text-lg md:text-xl text-foreground/80 font-headline">
             {resumeData.title}
           </p>
