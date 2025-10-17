@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
-import { fullResumeText } from "@/app/data";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -19,10 +18,11 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
+const resumeUrl = "https://drive.google.com/file/d/1uOsZKatUNd6JeZHfFD7oFLZ0NGh0APkN/view?usp=sharing";
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [downloadUrl, setDownloadUrl] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,13 +30,8 @@ export default function Header() {
     };
     window.addEventListener("scroll", handleScroll);
 
-    const blob = new Blob([fullResumeText], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    setDownloadUrl(url);
-
     return () => {
         window.removeEventListener("scroll", handleScroll);
-        URL.revokeObjectURL(url);
     };
   }, []);
 
@@ -65,7 +60,7 @@ export default function Header() {
             </Link>
           ))}
           <Button asChild variant="outline" size="sm">
-            <a href={downloadUrl} download="Tejaswini_Dabade_Resume.txt">
+            <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </a>
@@ -100,7 +95,7 @@ export default function Header() {
                     </Link>
                 ))}
                  <Button asChild>
-                    <a href={downloadUrl} download="Tejaswini_Dabade_Resume.txt">
+                    <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
                     Download Resume
                     </a>
