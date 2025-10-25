@@ -1,13 +1,21 @@
+"use client";
 import { resumeData } from "@/app/data";
 import { Button } from "./ui/button";
 import { Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 type HeroSectionProps = {
   summary: string;
 };
 
 export default function HeroSection({ summary }: HeroSectionProps) {
+  const fallbackUrl =
+    "https://placehold.co/300x300?text=Tejaswini";
+  const [imgSrc, setImgSrc] = useState<string>(
+    "https://media.licdn.com/dms/image/v2/C4D03AQHuwvV4jRRM9w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1661077155778?e=1762992000&v=beta&t=NMVOdMSlwbxsoam5_Q73eaJ9w2UJYVXI7Mu8rohSjQc"
+  );
+
   return (
     <section
       id="home"
@@ -22,11 +30,13 @@ export default function HeroSection({ summary }: HeroSectionProps) {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/50 shadow-lg justify-self-center">
             <Image
-              src="https://media.licdn.com/dms/image/v2/D4D35AQGjincfAP3vaA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1733424242818?e=1761303600&v=beta&t=JS24vtLWbgNCEVRsQVP-nIBHAaQXVbd3R4Ixtl0UrzE"
+              src={imgSrc}
               alt={resumeData.name}
               fill
               className="object-cover"
               priority
+              onError={() => setImgSrc(fallbackUrl)}
+              unoptimized
             />
           </div>
           <div className="flex flex-col items-center md:items-start">

@@ -32,6 +32,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'share.google',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'media.licdn.com',
         port: '',
         pathname: '/**',
@@ -41,3 +47,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+

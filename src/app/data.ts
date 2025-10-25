@@ -1,98 +1,17 @@
 export const fullResumeText = `Tejaswini Dabade
-Human Resource Executive
+Human Resource
 Confident and passionate HR professional with excellent communication and interpersonal skills. Persistent problem solver and energetic team member with strong people management skills.
 Seeking opportunities to leverage skills and knowledge in making a meaningful impact as a human resource professional in a reputed organization.
 WORK EXPERIENCE
 Futurz Staffing solutions Pvt Ltd.
-HR Consultant
-17th July 23 to till date Malad
+Senior HR Consultant
+17th July 23 to 12th Sept’ 25 Malad
 Work Profile
- Communicate with the hiring manager to discuss for
-various roles in non-IT requirements
- Collected job requirements and posted job descriptions on job
-portals like Shine, Naukri & Apna applications etc.
- Sourced candidates from job portals and social media platforms
- Screened applications and scheduled interviews with the
-prospective candidates
- Sent messages to the qualified candidates for the given role and
-followed up for an improved response rate.
- Communicated with candidates across each step of the application
-process.
- Drafted communication between HR department and candidates
-including candidate line up and follow-up.
- Maintained candidate records, and outperformed responsibilities
-to achieve client recruitment target.
- Arranging Clients in interactions &schedule interview with
-candidates till the date of joining
- Managed data using MS Office, Excel, Database
-PROMPT PERSONNEL PVT LTD
-Human Resource Executive
-Apr’22 - Jan’23 Malad
-Work Profile
- Screening Candidates as per requirements
- Performing in-personal & phone interviews with candidate
- Shortlisting Suitable Candidates Partnering with hiring managers to
-determine staffing needs.
- Interacted with managers to discuss vacancies, applicant
-qualifications and characteristics of the candidates.
- Managed pre-employment screening and crafted a screening
-checklist, to shortlist suitable resumes and reduced time spent on each applicant by the corporate hiring managers.
-Handled coordination and communication with managers for scheduling interviews for the screened applicants.
-Assisted and communicated with new and potential hires throughout the hiring process ensuring a positive candidate experience.
-Organized and managed data using MS Office. Maintained periodic logs and created spreadsheets using color coding to refine data
-winidabade123@gmail.com +918291752091 in www.linkedin.com/in/tejaswini-dabade-843b57179
-CORE COMPETENCIES
- Recruitment
- Candidate Sourcing & Screening
- Portals – Naukri, Shine, Apna, Job Hai & Mass Mail.
- Coordination with hiring manager & Candidates
- follow-ups
- Employee Relations
- Advance Excel
- Data Management
- EDUCATION
-Masters in Management Studies (HR)
-St Francis Institute of Management and Research
-Mumbai 2020 -2022
-Bachelor of Management Studies (HR)
-MH Shroff College of commerce
-Mumbai 2016 - 2019
- Internship
- TEN HARD INDIA PVT.LTD / HR Intern
- May 2021 – July 2021 Delhi
- Work Profile
-Database Management
-Interview Scheduling and candidates shortlisting
-Job posting on shine
- EKTA CONSULTANCY / Human Resource Intern
- Aug 2018 - Oct 2018 Kandivali
-Work Profile
- Candidates Lineups, Follow- ups
- Majority working on BPO recruitment
- Screening & Taking interview
- Job posting on job portals like shine, Naukri etc.
-EXTRA-CURRICULAR ACTIVITIES
- Participated and won many racing tournaments in
-college (2018-19)
- Won 3rd. position in 800 meters race in Youth
-Sports organized by Reliance Foundation (2017)
-SKILLS
- Decision-making
- Time management
- Multitasking
-INTERESTS
-Sports
-Dance
-Music
-Cooking
-LANGUAGES
-English
-Hindi
-Marathi`;
+`;
 
 export const resumeData = {
   name: "Tejaswini Dabade",
-  title: "Human Resource Executive",
+  title: "Human Resource",
   contact: {
     email: "winidabade123@gmail.com",
     phone: "+918291752091",
@@ -103,8 +22,8 @@ export const resumeData = {
   workExperience: [
     {
       company: "Futurz Staffing solutions Pvt Ltd.",
-      role: "HR Consultant",
-      period: "July 2023 - Present",
+      role: "Senior HR Consultant",
+      period: "July 2023 - 12th Sept’ 25",
       location: "Malad",
       duties: [
         "Communicate with hiring managers for various non-IT requirements.",
@@ -199,3 +118,7 @@ export const resumeData = {
   interests: ["Sports", "Dance", "Music", "Cooking"],
   languages: ["English", "Hindi", "Marathi"],
 };
+
+
+
+
